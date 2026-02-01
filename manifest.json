@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "filter",
+  "version": "0.0",
+  "description": "可以隐藏B站的重复推荐内容",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.bilibili.com/",
+        "https://www.bilibili.com/?*"
+      ],
+      "js": ["main.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": [
+    "storage",
+    "activeTab"
+  ]
+}
